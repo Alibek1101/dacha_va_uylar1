@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "603923889115",
+    "project_id": "dachavauylar",
+    "storage_bucket": "dachavauylar.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:603923889115:android:ba4d04e19ca8b5d5f285fe",
+        "android_client_info": {
+          "package_name": "com.example.dacha_va_uylar"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCWREJ4FlPHJeKHU7vpU7Kd45g_VsqrPtA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
