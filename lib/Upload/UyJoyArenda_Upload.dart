@@ -5,16 +5,16 @@ import 'package:image_picker/image_picker.dart';
 import '../service/RTDB_Servise.dart';
 import '../service/Storage.dart';
 
-class UyolishUpload extends StatefulWidget {
-  static final String id = "UyolishUpload";
+class UyjoyarendaUpload extends StatefulWidget {
+  static final String id = "UyjoyarendaUpload";
 
-  const UyolishUpload({super.key});
+  const UyjoyarendaUpload({super.key});
 
   @override
-  State<UyolishUpload> createState() => _UyolishUploadState();
+  State<UyjoyarendaUpload> createState() => _UyjoyarendaUploadState();
 }
 
-class _UyolishUploadState extends State<UyolishUpload> {
+class _UyjoyarendaUploadState extends State<UyjoyarendaUpload> {
   var isLoading = false;
   final nameController = TextEditingController();
   final captionController = TextEditingController();
@@ -97,13 +97,13 @@ class _UyolishUploadState extends State<UyolishUpload> {
     String location = locationController.text.toString().trim();
     String phone = phoneController.text.toString().trim();
 
-    if (name.isEmpty  || location.isEmpty || phone.isEmpty)
+    if (name.isEmpty ||  location.isEmpty || phone.isEmpty)
       return;
 
     _apiUploadImage(name, location, phone);
   }
 
-  _apiUploadImage(String name,  String location, String phone) {
+  _apiUploadImage(String name, String location, String phone) {
     setState(() {
       isLoading = true;
     });
@@ -117,13 +117,13 @@ class _UyolishUploadState extends State<UyolishUpload> {
 
     Future.wait(images.map((File a) => StorageService.uploadImage(a))).then((imgUrls) {
       // Assign URLs to the correct image fields
-      _apiCreateUylar(name,  imgUrls , location, phone);
+      _apiCreateUylar(name, imgUrls , location, phone);
     });
 
     print(images);
   }
 
-  _apiCreateUylar(String name,   List<dynamic> imgUrls, String location,
+  _apiCreateUylar(String name,  List<dynamic> imgUrls, String location,
       String phone) {
     String? imgurl = imgUrls.isNotEmpty ? imgUrls[0] : null;
     String? img1 = imgUrls.isNotEmpty ? imgUrls[1] : null;
@@ -141,7 +141,7 @@ class _UyolishUploadState extends State<UyolishUpload> {
       img3: img3,
       img4: img4,
     );
-    RTDBService.addUylar(post).then((value) => {
+    RTDBService.addArenda(post).then((value) => {
       _resAddPost(),
     });
   }
@@ -157,9 +157,10 @@ class _UyolishUploadState extends State<UyolishUpload> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.deepPurple.shade100,
         centerTitle: true,
         title: Text(
-          "U y l a r",
+          "Uy Joy Arenda",
           style: TextStyle(
               color: Colors.deepPurple,
               fontSize: 50,

@@ -27,6 +27,7 @@ dependencies:
   google_sign_in: ^6.2.1
   url_launcher: ^6.3.0
   firebase_database: ^10.4.0
+  fl_chart: ^0.69.0
 
 dev_dependencies:
   flutter_test:

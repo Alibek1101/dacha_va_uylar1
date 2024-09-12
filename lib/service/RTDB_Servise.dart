@@ -31,6 +31,11 @@ class RTDBService {
         price: map['price'],
         img_url : map['img_url'],
         location: map['location'],
+        phone: map ['phone'],
+        img1: map ['img1'],
+        img2: map ['img2'],
+        img3:  map ['img3'],
+        img4:  map ['img4'],
       );
       post.key=key;
       items.add(post);
@@ -62,6 +67,11 @@ class RTDBService {
         price: map['price'],
         img_url : map['img_url'],
         location: map['location'],
+        phone: map['phone'],
+        img1: map ['img1'],
+        img2: map ['img2'],
+        img3:  map ['img3'],
+        img4:  map ['img4'],
       );
       items.add(post);
     }
@@ -91,6 +101,12 @@ class RTDBService {
         name: map['name'],
         price: map['price'],
         img_url : map['img_url'],
+        phone: map['phone'],
+        location: map['location'],
+        img1: map ['img1'],
+        img2: map ['img2'],
+        img3:  map ['img3'],
+        img4:  map ['img4'],
       );
       items.add(post);
     }

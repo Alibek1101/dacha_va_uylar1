@@ -1,5 +1,6 @@
 import 'package:dacha_va_uylar/page/Dachalar.dart';
 import 'package:dacha_va_uylar/page/Main_Page.dart';
+import 'package:dacha_va_uylar/page/Splash.dart';
 import 'package:dacha_va_uylar/page/UyJoyArenda.dart';
 import 'package:dacha_va_uylar/page/UyOlish_Page.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -47,12 +48,12 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home:  Main_Page(),
+        home:  Splash(),
         routes: {
           Main_Page.id:(context)=>Main_Page(),
           Dachalar.id:(context)=>Dachalar(),
-          UyJoyArenda.id:(context)=>UyJoyArenda(),
-          UyolishPage.id:(context)=>UyolishPage(),
+           UyJoyArenda.id:(context)=>UyJoyArenda(),
+           UyolishPage.id:(context)=>UyolishPage(),
 
         }
         );
